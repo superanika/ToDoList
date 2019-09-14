@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mi lista de tareas</title>
+    <link rel="shortcut icon" href="./images/checkbox-checked.png"/>
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="wrapper3">
+        <div class="wrapper2">
+            <div class="wrapper">
+                <header class ="header">
+                    <img class="logo" src="logo.jpg">
+                    <div class="date_container">
+                        <div class="left_side">
+                            <p class="day_num"></p>
+                        </div>
+                       <div class="right_side">
+                           <p class="day_name"></p>
+                           <p class="month_year"></p>
+                       </div>
+                        
+                    </div>
+                </header>
+                <main class ="main">
+                    <p class="empty_msg">No tienes ninguna tarea en la lista.  Pulsa + para añadir una.</p>
+                    <ul class="tasks"></ul>
+                    <ul class="done_tasks"></ul>
+                    <div class="modal_container">
+                        <div class="wrapper_shadow"></div>
+                    </div>
+                    <div class="modal">
+                        <label for="input_field" class="modal_label">Nueva tarea</label>
+                        <input class ="input" type="text">
+                        <button class="add_task">Añadir</button>
+                        <p class="error">Por favor, introduce una tarea</p>
+                    </div>
+                        
+                </main>
+                <footer class ="footer">
+                    <button class="modal_btn">+</button>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>

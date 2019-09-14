@@ -1,0 +1,251 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(#14d9c4, #0aa393);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    color: gray;
+}
+
+.wrapper3 {
+    width : 320px;
+    height: 460px;
+    z-index: 1;
+    background-color: #bde7e3;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow:  0px 10px 8px -4px rgba(0,0,0,0.5);
+}
+.wrapper2 {
+    width : 310px;
+    height: 480px;
+    z-index: 2;
+    background-color: #dfeceb;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow:  0px 10px 8px -4px rgba(0,0,0,0.5);
+}
+
+.wrapper {
+    width : 300px;
+    height: 500px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow:  0px 10px 8px -4px rgba(0,0,0,0.5);
+}
+
+.header {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 12px;
+    border-bottom: 1px solid #14d9c4; 
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+}
+
+.date_container{
+    display: flex;
+    text-transform: capitalize;
+    margin-right: 10px; 
+}
+
+.day_num {
+    height: 50px;
+    font-size: 56px;
+    color: #0aa393;
+    margin: 0 15px 0 0;
+}
+.day_name {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.month_year {
+    margin: 0
+
+}
+
+.main {
+box-sizing: border-box;
+   width: 100%;
+   height: 100%;
+   overflow: auto;
+   padding: 15px;
+}
+
+.list_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+.task_item {
+    width: 90%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-grow: 1;
+}
+.label {
+  margin: 0;
+  font-size: 18px;
+  width: 70%;;
+}
+
+.tasks, .done_tasks {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.empty_msg {
+    padding: 15px;
+    text-align: center;
+    font-style: italic;
+    color: #0aa393;
+    display: none;
+}
+.trash_icon {
+    color: rgb(153, 153, 153);
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.footer {
+    width: 100%;
+    height: 100px;
+    border-top: 1px solid lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal_container {
+    z-index: 10;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top:0;
+    left: 0;
+    display: none;
+}
+.wrapper_shadow {
+    background-color: rgba(255, 255, 255, 0.85);
+    width : 300px;
+    height: 500px;
+    border-radius: 5px;
+}
+
+.modal {
+    position: absolute;
+    box-sizing: border-box;
+    height: 150px;
+    width: 200px;
+    padding: 15px 20px;
+    background-color: #0aa393;
+    left: 50%;
+    top: 55%;
+    margin-left: -100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;  
+    z-index: 11;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.65);
+    display: none;
+}
+.modal_label {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 10px 0;
+}
+.input {
+    box-sizing: border-box;
+    background-color: transparent;
+    border: 1px solid  rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    width: 100%;
+    padding: 5px;
+    color: white;
+    margin-bottom: 15px;
+}
+.add_task {
+    cursor: pointer;
+    align-self: center;
+    border: 2px solid white;
+    background-color: #0aa393;
+    color: white;
+    border-radius: 25px;
+    padding: 5px 15px;
+    
+}
+
+.modal_btn {
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    background: transparent;
+    box-shadow: none;
+    border: 3px solid #14d9c4;
+    border-radius: 50%;
+    color: #0aa393;
+    font-size: 45px;
+    line-height: 45px;
+    margin: 10px 0;
+}
+
+.error {
+    color: white;
+    font-size: 11px;
+    margin: 10px 0 0;
+    align-self: center;
+    display: none;
+}
+
+.round_check {
+    display: block;
+    background-image: url('./images/checkbox-empty.png');
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+    margin-right: 15px;
+}
+.done {
+    color: lightgray;
+    text-decoration: line-through;
+}
+.checked {
+    background-image: url('./images/checkbox-checked.png');
+}
+.show {
+    display: flex;
+}
+.show_shadow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
